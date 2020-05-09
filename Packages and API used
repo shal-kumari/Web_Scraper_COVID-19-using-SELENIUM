@@ -1,0 +1,10 @@
+1. from selenium import webdriver
+2. from selenium.webdriver.common.keys import Keys
+3. from email.mime.text import MIMEText
+4. from email.mime.multipart import MIMEMultipart
+5. from time import sleep
+6. import datetime
+7. import smtplib
+8. import credentials
+
+# Use Selenium webdriver to set up interaction with the browser.
