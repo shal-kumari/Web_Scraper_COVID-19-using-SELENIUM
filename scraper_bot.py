@@ -14,13 +14,13 @@ sleep(2)
 def extractor():
     
     #Extracts HTML elements using full xpath 
-    TCases = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[1]/h1")
-    TActive = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[2]/h1")
-    TRecov = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[3]/h1")
-    TDeath = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[4]/h1")
-    New_Cases = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[1]/h4")
-    New_Rcov = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[3]/h4")
-    New_Death = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[4]/h4")
+    TCases = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[1]/h1")    #xpath corresponding to total cases
+    TActive = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[2]/h1")   #xpath corresponding to total active cases
+    TRecov = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[3]/h1")    #xpath corresponding to total recoveries
+    TDeath = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[4]/h1")    #xpath corresponding to total deaths
+    New_Cases = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[1]/h4") #xpath corresponding to new cases 
+    New_Rcov = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[3]/h4")  #xpath corresponding to new recoveries
+    New_Death = driver.find_element_by_xpath("/html/body/div/div/div/div[2]/div[1]/div[2]/div[4]/h4") #xpath corresponding to new deaths 
     #Prints statistics on sender's console
     print("Total Cases:",TCases.text)
     print("Total Active Cases:",TActive.text)
