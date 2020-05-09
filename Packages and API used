@@ -8,3 +8,8 @@
 8. import credentials
 
 # Use Selenium webdriver to set up interaction with the browser.
+# Use MIMEText to set up email exchange module
+# Use time module to import sleep() function for pauses in execution
+# Use datetime module to introduce date and exact time in the email message
+# Use smtplib to integrate email module
+# credentials.py exists in my local computer and contains email username of sender and authentication code. 
