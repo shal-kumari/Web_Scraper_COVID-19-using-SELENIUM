@@ -95,3 +95,35 @@ alert = driver.switch_to_alert()
 This will return the currently open alert object. 
 With this object, you can now accept, dismiss, read its contents or even type into a prompt. 
 This interface works equally well on alerts, confirms, prompts. Refer to the API documentation for more information.
+
+                                              **Moving between windows and frames**
+It’s rare for a modern web application not to have any frames or to be constrained to a single window. WebDriver supports moving between named windows using the “switch_to_window” method:
+
+driver.switch_to_window("windowName")
+All calls to driver will now be interpreted as being directed to the particular window. But how do you know the window’s name? Take a look at the javascript or link that opened it:
+
+<a href="somewhere.html" target="windowName">Click here to open a new window</a>
+Alternatively, you can pass a “window handle” to the “switch_to_window()” method. Knowing this, it’s possible to iterate over every open window like so:
+
+for handle in driver.window_handles:
+    driver.switch_to_window(handle)
+You can also swing from frame to frame (or into iframes):
+
+driver.switch_to_frame("frameName")
+It’s possible to access subframes by separating the path with a dot, and you can specify the frame by its index too. That is:
+
+driver.switch_to_frame("frameName.0.child")
+would go to the frame named “child” of the first subframe of the frame called “frameName”. All frames are evaluated as if from *top*.
+
+Once we are done with working on frames, we will have to come back to the parent frame which can be done using:
+driver.switch_to_default_content()
+
+                                                          **Popup dialogs**
+                                                          
+Selenium WebDriver has built-in support for handling popup dialog boxes. 
+After you’ve triggered action that would open a popup, you can access the alert with the following:
+
+alert = driver.switch_to_alert()
+This will return the currently open alert object. 
+With this object, you can now accept, dismiss, read its contents or even type into a prompt. 
+This interface works equally well on alerts, confirms, prompts. Refer to the API documentation for more information.
