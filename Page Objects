@@ -1,4 +1,4 @@
-Page Objects
+                                                              **Page Objects**
 This chapter is a tutorial introduction to page objects design pattern. 
 A page object represents an area in the web application user interface that your test is interacting.
 
