@@ -1,7 +1,7 @@
                                                               **Simple Usage**
 If you have installed Selenium Python bindings, you can start using it from Python like this.
 
-#CODE BEGINS
+ #CODE BEGINS
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 driver = webdriver.Firefox()
@@ -13,7 +13,7 @@ elem.send_keys("pycon")
 elem.send_keys(Keys.RETURN)
 assert "No results found." not in driver.page_source
 driver.close()
-#CODE ENDS
+ #CODE ENDS
 The above script can be saved into a file (eg:- python_org_search.py), then it can be run like this:
 
 python python_org_search.py
