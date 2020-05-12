@@ -14,13 +14,14 @@ Selenium provides the following methods to locate elements in a page:
 
 To find multiple elements (these methods will return a list):
 
-find_elements_by_name
-find_elements_by_xpath
-find_elements_by_link_text
-find_elements_by_partial_link_text
-find_elements_by_tag_name
-find_elements_by_class_name
-find_elements_by_css_selector
+1. find_elements_by_name
+2. find_elements_by_xpath
+3. find_elements_by_link_text
+4. find_elements_by_partial_link_text
+5. find_elements_by_tag_name
+6. find_elements_by_class_name
+7. find_elements_by_css_selector
+
 Apart from the public methods given above, there are two private methods which might be useful with locators in page objects. 
 These are the two private methods: find_element and find_elements.
 
