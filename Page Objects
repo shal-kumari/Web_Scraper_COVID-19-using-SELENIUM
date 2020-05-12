@@ -92,3 +92,24 @@ class SearchResultsPage(BasePage):
         # Probably should search for this text in the specific page
         # element, but as for now it works fine
         return "No results found." not in self.driver.page_source
+          
+                                                          **Page elements**
+                                                          
+The element.py will look like this:
+
+from selenium.webdriver.support.ui import WebDriverWait
+class BasePageElement(object):
+    def __set__(self, obj, value):
+        """Sets the text to the value supplied"""
+        driver = obj.driver
+        WebDriverWait(driver, 100).until(
+            lambda driver: driver.find_element_by_name(self.locator))
+        driver.find_element_by_name(self.locator).clear()
+        driver.find_element_by_name(self.locator).send_keys(value)
+
+    def __get__(self, obj, owner):
+        driver = obj.driver
+        WebDriverWait(driver, 100).until(
+            lambda driver: driver.find_element_by_name(self.locator))
+        element = driver.find_element_by_name(self.locator)
+        return element.get_attribute("value")
