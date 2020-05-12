@@ -37,7 +37,7 @@ class PythonOrgSearch(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
     
-                                                              **Page object classes**
+                                                              **PAGE OBJECT CLASSES**
 The page object pattern intends creating an object for each web page. 
 By following this technique a layer of separation between the test code and technical implementation is created.
 
@@ -84,7 +84,7 @@ class SearchResultsPage(BasePage):
         # element, but as for now it works fine
         return "No results found." not in self.driver.page_source
           
-                                                          **Page elements**
+                                                          **PAGE ELEMENTS**
                                                           
 The element.py will look like this:
 
@@ -105,7 +105,7 @@ class BasePageElement(object):
         element = driver.find_element_by_name(self.locator)
         return element.get_attribute("value")
         
-                                                        **Locators**
+                                                        **LOCATORS**
 One of the practices is to separate the locator strings from the place where they are being used. 
 In this example, locators of the same page belong to same class.
 
