@@ -1,5 +1,5 @@
 
-                                                            **Locating Elements**
+                                                            **LOCATING ELEMENTS**
 There are various strategies to locate elements in a page. You can use the most appropriate one for your case. 
 Selenium provides the following methods to locate elements in a page:
 
@@ -25,7 +25,7 @@ To find multiple elements (these methods will return a list):
 Apart from the public methods given above, there are two private methods which might be useful with locators in page objects. 
 These are the two private methods: find_element and find_elements.
 
-                                                        **Locating by XPath**
+                                                        **LOCATING BY XPATH**
 XPath is the language used for locating nodes in an XML document. 
 As HTML can be an implementation of XML (XHTML), Selenium users can leverage this powerful language to target elements in their web applications. 
 XPath extends beyond (as well as supporting) the simple methods of locating by id or name attributes, and opens up all sorts of new possibilities such as locating the third checkbox on the page.
@@ -69,6 +69,7 @@ username = driver.find_element_by_xpath("//input[@name='username']")
 First form element with an input child element with attribute named name and the value username
 First input child element of the form element with attribute named id and the value loginForm
 First input element with attribute named ‘name’ and the value username
+
 The “Clear” button element can be located like this:
 
 clear_button = driver.find_element_by_xpath("//input[@name='continue'][@type='button']")
